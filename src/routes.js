@@ -1,6 +1,10 @@
-const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler } = require("./handler")
+const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler, homeHandler } = require("./handler")
 
 const routes = [{
+    method: 'GET',
+    path: '/',
+    handler: homeHandler
+},{
     method: 'POST',
     path: '/notes',
     handler: addNoteHandler
